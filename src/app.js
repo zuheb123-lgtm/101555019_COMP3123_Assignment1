@@ -7,6 +7,7 @@ const errorHandler = require('./middleware/errorHandler');
 const { apiLimiter } = require('./middleware/rateLimiters');
 const healthRoutes = require('./routes/healthRoutes');
 const userRoutes = require('./routes/userRoutes');
+const employeeRoutes = require('./routes/employeeRoutes');
 
 const app = express();
 
@@ -16,7 +17,7 @@ app.use(helmet());
 // Log every request
 app.use(requestLogger);
 
-// Parse JSON bodies with a max 10kb to block oversized payloads
+// Parse JSON bodies (max 10kb to block oversized payloads)
 app.use(express.json({ limit: '10kb' }));
 
 // Health check
@@ -27,6 +28,7 @@ app.use('/api', apiLimiter);
 
 // API routes
 app.use('/api/v1/user', userRoutes);
+app.use('/api/v1/emp', employeeRoutes);
 
 // Unknown routes -> 404, then centralized error handling
 app.use(notFound);
