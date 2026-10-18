@@ -1,0 +1,4 @@
+$kind: http-request
+url: http://localhost:3000/api/v1/emp/employees/6ad3abebc55acfd76661ad83
+method: GET
+order: 5000

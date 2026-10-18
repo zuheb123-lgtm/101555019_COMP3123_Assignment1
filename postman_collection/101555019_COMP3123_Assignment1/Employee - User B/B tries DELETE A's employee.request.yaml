@@ -1,0 +1,6 @@
+$kind: http-request
+url: http://localhost:3000/api/v1/emp/employees?eid=6ad3ab62c55acfd76661ad80
+method: DELETE
+queryParams:
+  eid: 6ad3ab62c55acfd76661ad80
+order: 5000

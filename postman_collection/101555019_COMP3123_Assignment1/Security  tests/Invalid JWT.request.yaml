@@ -1,0 +1,8 @@
+$kind: http-request
+url: http://localhost:3000/api/v1/emp/employees
+method: GET
+auth:
+  type: bearer
+  credentials:
+    token: invalid.token.here
+order: 3000

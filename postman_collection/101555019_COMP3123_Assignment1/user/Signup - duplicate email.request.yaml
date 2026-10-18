@@ -1,0 +1,15 @@
+$kind: http-request
+url: http://localhost:3000/api/v1/user/signup
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \"username\": \"newuser\", \r
+
+    \"email\": \"usera@test.com\", \r
+
+    \"password\": \"Password123\"\r
+
+    }"
+order: 4000

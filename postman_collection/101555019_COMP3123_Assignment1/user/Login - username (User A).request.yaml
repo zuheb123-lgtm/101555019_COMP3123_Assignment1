@@ -1,0 +1,15 @@
+$kind: http-request
+url: http://localhost:3000/api/v1/user/login
+method: POST
+body:
+  type: json
+  content: "{\"username\": \"usera\", \r
+
+    \"password\": \r
+
+    \"Password123\"}"
+scripts:
+  - type: afterResponse
+    code: pm.collectionVariables.set("tokenA", pm.response.json().token);
+    language: text/javascript
+order: 8000

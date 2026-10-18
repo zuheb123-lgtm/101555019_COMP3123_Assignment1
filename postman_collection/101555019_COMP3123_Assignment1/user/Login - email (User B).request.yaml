@@ -1,0 +1,11 @@
+$kind: http-request
+url: http://localhost:3000/api/v1/user/login
+method: POST
+body:
+  type: json
+  content: '{"email": "userb@test.com", "password": "Password123"}'
+scripts:
+  - type: afterResponse
+    code: pm.collectionVariables.set("tokenB", pm.response.json().token);
+    language: text/javascript
+order: 9000

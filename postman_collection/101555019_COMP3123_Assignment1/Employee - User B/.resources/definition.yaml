@@ -1,0 +1,10 @@
+$kind: collection
+auth:
+  - id: e1f5638b-aa81-489b-a54f-8efb6e17c226
+    type: bearer
+    name: Bearer Token
+    credentials:
+      token: "{{tokenB}}"
+    rules:
+      url: localhost:3000/*
+order: 3000

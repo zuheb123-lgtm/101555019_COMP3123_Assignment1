@@ -1,0 +1,7 @@
+$kind: http-request
+url: http://localhost:3000/api/v1/emp/employees/6ad3ab62c55acfd76661ad80
+method: PUT
+body:
+  type: json
+  content: '{"salary": 1}'
+order: 4000

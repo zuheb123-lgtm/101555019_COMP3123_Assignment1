@@ -1,0 +1,7 @@
+$kind: http-request
+url: http://localhost:3000/api/v1/emp/employees
+method: POST
+body:
+  type: json
+  content: '{"first_name":"Dan","last_name":"Lee","email":"dan@company.com","position":"Dev","salary":-500,"date_of_joining":"2024-01-10","department":"IT"}'
+order: 12000

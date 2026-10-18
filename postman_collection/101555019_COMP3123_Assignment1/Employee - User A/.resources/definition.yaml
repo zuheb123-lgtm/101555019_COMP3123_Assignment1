@@ -1,0 +1,10 @@
+$kind: collection
+auth:
+  - id: c7254100-2831-4751-8041-51505232c457
+    type: bearer
+    name: Bearer Token
+    credentials:
+      token: "{{tokenA}}"
+    rules:
+      url: localhost:3000/*
+order: 2000
